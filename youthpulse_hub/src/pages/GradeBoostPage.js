@@ -31,7 +31,7 @@ function createSubject() {
   };
 }
 
-// PUBLIC_INTERFACE
+ // PUBLIC_INTERFACE
 /**
  * GradeBoostPage: Interactive CGPA calculator for YouthPulse Hub.
  *
@@ -39,7 +39,7 @@ function createSubject() {
  * - Calculates GPA/CGPA and visually shows it with animated circular progress via Recharts.
  * - Features error validation, responsive dark UI, and a Reset button.
  */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 // --- GRADE MAPPING --- //
@@ -77,7 +77,7 @@ function createSubject() {
  * - Calculates GPA/CGPA and visually shows it with animated circular progress via Recharts.
  * - Features error validation, responsive dark UI, and a Reset button.
  */
-// PUBLIC_INTERFACE
+ // PUBLIC_INTERFACE
 function GradeBoostPage() {
   const [subjects, setSubjects] = useState([
     createSubject()
