@@ -70,6 +70,13 @@ function createSubject() {
   };
 }
 
+/**
+ * GradeBoostPage: Interactive CGPA calculator for YouthPulse Hub.
+ *
+ * - Lets user enter subjects, grades, credits.
+ * - Calculates GPA/CGPA and visually shows it with animated circular progress via Recharts.
+ * - Features error validation, responsive dark UI, and a Reset button.
+ */
 // PUBLIC_INTERFACE
 function GradeBoostPage() {
   const [subjects, setSubjects] = useState([
