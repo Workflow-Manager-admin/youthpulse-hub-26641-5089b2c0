@@ -5,8 +5,7 @@ import PropTypes from "prop-types";
 // PUBLIC_INTERFACE
 /**
  * GlowingIcon renders a large, circular icon with a glowing and scaling hover effect.
- * - Uses Tailwind CSS for layout, shadow, scaling, and glow color.
- * - Calls onClick or navigates to 'to' route when clicked.
+ * Already uses responsive design, accent theme, and Tailwind-powered interactions.
  */
 export default function GlowingIcon({ icon, label, to, glowColor = "from-orange-400 via-pink-500 to-yellow-400" }) {
   const navigate = useNavigate();
@@ -26,6 +25,7 @@ export default function GlowingIcon({ icon, label, to, glowColor = "from-orange-
         focus:outline-none
         border-4 border-transparent
         hover:border-orange-400
+        focus:ring-4 focus:ring-orange-400/30
         duration-200
         ease-in-out
         group
