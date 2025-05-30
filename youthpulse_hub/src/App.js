@@ -2,13 +2,17 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 
-// Import all pages
 import HomePage from './pages/HomePage';
 import GradeBoostPage from './pages/GradeBoostPage';
 import SplitMatePage from './pages/SplitMatePage';
 import FocusFlowPage from './pages/FocusFlowPage';
 
+// PUBLIC_INTERFACE
 function App() {
+  /**
+   * Main App component for YouthPulse Hub.
+   * Sets up routing and navigates between main tool pages.
+   */
   return (
     <Router>
       <div className="app">
@@ -18,7 +22,7 @@ function App() {
               <div className="logo">
                 <span className="logo-symbol">*</span> KAVIA AI
               </div>
-              {/* Navigation links to the feature pages */}
+              {/* Navigation to key feature pages */}
               <div style={{ display: 'flex', gap: '8px' }}>
                 <Link className="btn" to="/">Home</Link>
                 <Link className="btn" to="/gradeboost">GradeBoost</Link>
@@ -29,7 +33,6 @@ function App() {
           </div>
         </nav>
         <main style={{ marginTop: '72px' }}>
-          {/* Define routes here */}
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/gradeboost" element={<GradeBoostPage />} />
