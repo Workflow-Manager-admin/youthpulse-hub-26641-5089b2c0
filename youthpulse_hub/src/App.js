@@ -1,36 +1,44 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+
+// Import all pages
+import HomePage from './pages/HomePage';
+import GradeBoostPage from './pages/GradeBoostPage';
+import SplitMatePage from './pages/SplitMatePage';
+import FocusFlowPage from './pages/FocusFlowPage';
 
 function App() {
   return (
-    <div className="app">
-      <nav className="navbar">
-        <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-            <div className="logo">
-              <span className="logo-symbol">*</span> KAVIA AI
+    <Router>
+      <div className="app">
+        <nav className="navbar">
+          <div className="container">
+            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+              <div className="logo">
+                <span className="logo-symbol">*</span> KAVIA AI
+              </div>
+              {/* Navigation links to the feature pages */}
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <Link className="btn" to="/">Home</Link>
+                <Link className="btn" to="/gradeboost">GradeBoost</Link>
+                <Link className="btn" to="/splitmate">SplitMate</Link>
+                <Link className="btn" to="/focusflow">FocusFlow</Link>
+              </div>
             </div>
-            <button className="btn">Template Button</button>
           </div>
-        </div>
-      </nav>
-
-      <main>
-        <div className="container">
-          <div className="hero">
-            <div className="subtitle">AI Workflow Manager Template</div>
-            
-            <h1 className="title">youthpulse_hub</h1>
-            
-            <div className="description">
-              Start building your application.
-            </div>
-            
-            <button className="btn btn-large">Button</button>
-          </div>
-        </div>
-      </main>
-    </div>
+        </nav>
+        <main style={{ marginTop: '72px' }}>
+          {/* Define routes here */}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/gradeboost" element={<GradeBoostPage />} />
+            <Route path="/splitmate" element={<SplitMatePage />} />
+            <Route path="/focusflow" element={<FocusFlowPage />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
