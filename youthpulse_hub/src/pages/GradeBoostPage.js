@@ -41,32 +41,7 @@ function createSubject() {
  */
 
 // --- GRADE MAPPING --- //
-const GRADE_MAP = {
-  'A+': 10,
-  'A': 9,
-  'B+': 8,
-  'B': 7,
-  'C+': 6,
-  'C': 5,
-  'D': 4,
-  'F': 0,
-};
-
-const COLORS = [
-  "#E87A41",
-  "#24292F",
-];
-
-const GRADE_OPTIONS = Object.keys(GRADE_MAP);
-
-function createSubject() {
-  return {
-    name: "",
-    grade: "",
-    credits: "",
-    errors: {}
-  };
-}
+// Duplicate declarations removed—see earlier definitions above.
 
 /**
  * GradeBoostPage: Interactive CGPA calculator for YouthPulse Hub.
