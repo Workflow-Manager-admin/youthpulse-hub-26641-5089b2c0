@@ -39,8 +39,6 @@ function createSubject() {
  * - Calculates GPA/CGPA and visually shows it with animated circular progress via Recharts.
  * - Features error validation, responsive dark UI, and a Reset button.
  */
-import { useState } from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 // --- GRADE MAPPING --- //
 const GRADE_MAP = {
